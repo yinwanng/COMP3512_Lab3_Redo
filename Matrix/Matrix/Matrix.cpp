@@ -114,4 +114,9 @@ bool operator>(const Matrix & lhs, const Matrix &rhs)
 	return operator< (rhs, lhs);
 }
 
+bool operator<=(const Matrix & lhs, const Matrix &rhs)
+{
+	return !operator> (lhs, rhs);
+}
+
 
