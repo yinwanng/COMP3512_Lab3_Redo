@@ -10,7 +10,9 @@ int main()
 	int values[] = { 1, 2, 3, 4 };
 	
 
-	Matrix a;
+	Matrix a(values, 4);
+
+	cout << a;
 
 
 	

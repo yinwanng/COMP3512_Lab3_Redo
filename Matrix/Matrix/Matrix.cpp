@@ -64,6 +64,20 @@ void Matrix::clear() const
 	}
 }
 
+ostream & operator<<(ostream & out, const Matrix & m)
+{
+	for (int row = 0; row < m.dimensions; row++) {
+		for (int col = 0; col < m.dimensions; col++) {
+			out << m.get_value(row, col);
+			if (col % m.dimensions == m.dimensions - 1)
+			{
+				out << "\n";
+			}
+		}
+	}
+	return out;
+}
+
 // for testing purposes
 void Matrix::print() 
 {

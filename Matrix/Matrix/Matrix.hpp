@@ -16,6 +16,8 @@ public:
 	void set_value(int, int, int);
 	int get_value(int, int) const;
 	void clear() const;
+	friend ostream & operator<<(ostream &, const Matrix &);
+
 	void print(); // for testing purposes
 private:
 	int *matrix;
