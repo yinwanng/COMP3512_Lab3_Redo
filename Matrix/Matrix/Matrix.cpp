@@ -219,4 +219,17 @@ Matrix & Matrix::operator-=(const Matrix &rhs)
 	return *this;
 }
 
-
+Matrix & Matrix::identity()
+{
+	for (int row = 0; row < this->dimensions; row++) {
+		for (int col = 0; col < this->dimensions; col++) {
+			if (row == col) {
+				this->matrix[row * this->dimensions + col] = 1;
+			}
+			else {
+				this->matrix[row * this->dimensions + col] = 0;
+			}
+		}
+	}
+	return *this;
+}
