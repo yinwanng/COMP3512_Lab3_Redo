@@ -96,4 +96,9 @@ bool operator==(const Matrix &lhs, const Matrix &rhs)
 	}
 }
 
+bool operator!=(const Matrix &lhs, const Matrix &rhs)
+{
+	return !operator==(lhs, rhs);
+}
+
 

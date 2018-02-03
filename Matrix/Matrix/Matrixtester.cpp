@@ -7,20 +7,20 @@ using std::invalid_argument;
 
 int main()
 {
-	int values[] = { 1, 2, 3, 4,5,6,7,8,9};
+	int values[] = { 1, 2, 3, 4,5,6,7,8};
 	int values2[] = { 1, 2, 3, 4 , 5, 6, 7, 8, 9};
 	
 
 	Matrix a(values, 9);
 	Matrix b(values2, 9);
 
-	if (a == b)
+	if (a != b)
 	{
-		cout << "same";
+		cout << "not equal";
 	}
 	else
 	{
-		cout << "not same";
+		cout << "they are equal";
 	}
 	
 
