@@ -6,10 +6,7 @@ class Matrix
 {
 public:
 	Matrix();
-	~Matrix()
-	{
-		delete[] matrix;
-	}
+	~Matrix();
 	Matrix(const Matrix &);
 	Matrix(int);
 	Matrix(int[], int);
@@ -26,10 +23,11 @@ public:
 	friend bool operator<=(const Matrix&, const Matrix&);
 	friend bool operator>=(const Matrix&, const Matrix&);
 
-	//preincrement
-	Matrix& operator++();
-	//postincremnet
-	Matrix operator++(int);
+	
+	Matrix& operator++();//prefix incremnet
+	Matrix operator++(int);//postfix increment
+	Matrix& operator--();  // prefix decrement
+
 
 	// assignment operator using the copy-and-swap algorithm
 	friend void swap(Matrix&, Matrix&);

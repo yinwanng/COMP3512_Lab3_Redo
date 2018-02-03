@@ -13,6 +13,11 @@ Matrix::Matrix()
 	matrix[0] = 0;
 }
 
+Matrix::~Matrix()
+{
+	delete[] matrix;
+}
+
 Matrix::Matrix(const Matrix &other)
 {
 	dimensions = other.dimensions;
@@ -91,6 +96,18 @@ Matrix Matrix::operator++(int)
 	operator++();
 	return tmp;
 }
+
+Matrix & Matrix::operator--()
+{
+	for (int row = 0; row < dimensions; row++) {
+		for (int col = 0; col < dimensions; col++) {
+			matrix[row * dimensions + col] = matrix[row * dimensions + col] - 1;
+		}
+	}
+	return *this;
+}
+
+
 
 ostream & operator<<(ostream & out, const Matrix & m)
 {

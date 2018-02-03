@@ -13,25 +13,12 @@ int main()
 
 	Matrix a(values, 4);
 	Matrix b(values2, 9);
-	cout << "a" << endl;
-	cout << a << endl;
+	
 
-	cout << "b" << endl;
-	cout << b << endl;
-
-	//b = a;
-
-	cout << "new b" << endl;
-	cout << b << endl;
-	a = b;
-	cout << "a" << endl;
-	a++;
 	cout << a << endl;
 
 
-	cout << "==========" << endl;
-	Matrix fk(a);
-	cout << fk << endl;
+	cout << a << endl;
 	
 	system("pause");
 
