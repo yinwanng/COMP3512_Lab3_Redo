@@ -21,9 +21,9 @@ int main()
 
 	cout << b << endl;
 
-	a-=b;
+	c = a - b;
 
-	cout << a << endl;
+	cout << c << endl;
 
 
 	

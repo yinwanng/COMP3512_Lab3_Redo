@@ -187,13 +187,19 @@ Matrix operator+(Matrix lhs, const Matrix &rhs)
 	return lhs;
 }
 
+Matrix operator-(Matrix lhs, const Matrix &rhs)
+{
+	lhs -= rhs;
+	return lhs;
+}
+
 Matrix & Matrix::operator=(Matrix other)
 {
 	swap(*this, other);
 	return *this;
 }
 
-Matrix & Matrix::operator+=(const Matrix & rhs)
+Matrix & Matrix::operator+=(const Matrix &rhs)
 {
 	for (int row = 0; row < rhs.dimensions; row++) {
 		for (int col = 0; col < rhs.dimensions; col++) {
@@ -203,7 +209,7 @@ Matrix & Matrix::operator+=(const Matrix & rhs)
 	return *this;
 }
 
-Matrix & Matrix::operator-=(const Matrix & rhs)
+Matrix & Matrix::operator-=(const Matrix &rhs)
 {
 	for (int row = 0; row < rhs.dimensions; row++) {
 		for (int col = 0; col < rhs.dimensions; col++) {
