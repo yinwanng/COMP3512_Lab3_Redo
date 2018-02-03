@@ -186,3 +186,15 @@ Matrix & Matrix::operator=(Matrix other)
 	swap(*this, other);
 	return *this;
 }
+
+Matrix & Matrix::operator+=(const Matrix & rhs)
+{
+	for (int row = 0; row < rhs.dimensions; row++) {
+		for (int col = 0; col < rhs.dimensions; col++) {
+			this->matrix[row * this->dimensions + col] = this->matrix[row * this->dimensions + col] + matrix[row * rhs.dimensions + col];
+		}
+	}
+	return *this;
+}
+
+
