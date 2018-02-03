@@ -27,7 +27,7 @@ public:
 	Matrix& operator++();//prefix incremnet
 	Matrix operator++(int);//postfix increment
 	Matrix& operator--();  // prefix decrement
-
+	Matrix operator--(int); //postfix decrement
 
 	// assignment operator using the copy-and-swap algorithm
 	friend void swap(Matrix&, Matrix&);

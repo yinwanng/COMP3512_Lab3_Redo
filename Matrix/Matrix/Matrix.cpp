@@ -107,7 +107,12 @@ Matrix & Matrix::operator--()
 	return *this;
 }
 
-
+Matrix Matrix::operator--(int)
+{
+	Matrix tmp(*this);
+	operator--();
+	return tmp;
+}
 
 ostream & operator<<(ostream & out, const Matrix & m)
 {
