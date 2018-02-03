@@ -42,7 +42,7 @@ public:
 	// +=, +, -+, -
 	Matrix& operator+=(const Matrix&);
 	friend Matrix operator+(Matrix, const Matrix &);
-
+	Matrix& operator-=(const Matrix &);
 
 private:
 	int *matrix;
