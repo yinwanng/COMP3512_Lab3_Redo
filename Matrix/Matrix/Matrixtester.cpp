@@ -11,8 +11,8 @@ int main()
 	
 	
 	try {
-		Matrix a(values, 2);
-		a.print();
+		Matrix a(values, 4);
+		//a.print();
 	}
 	catch (const invalid_argument& e) {
 		cout << "ERROR: " << e.what() << endl;
@@ -20,10 +20,11 @@ int main()
 
 
 
-	Matrix b;
-	b.set_value(0,0,2);
+	Matrix b(values, 4);
+	//b.set_value(0,0,2);
 	b.print();
-	cout << b.get_value(0,0);
+	b.clear();
+	b.print();
 	
 
 

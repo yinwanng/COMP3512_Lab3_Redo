@@ -2,6 +2,7 @@
 #include <iostream>
 
 using std::cout;
+using std::endl;
 using std::invalid_argument;
 
 Matrix::Matrix()
@@ -52,12 +53,21 @@ int Matrix::get_value(int row, int col) const
 	return matrix[row * dimensions + col];
 }
 
+void Matrix::clear() const
+{
+	for (int row = 0; row < dimensions; row++) {
+		for (int col = 0; col < dimensions; col++) {
+			matrix[row * dimensions + col] = 0;
+		}
+	}
+}
+
 // for testing purposes
 void Matrix::print() const
 {
 	for (int row = 0; row < dimensions; row++) {
 		for (int col = 0; col < dimensions; col++) {
-			cout << matrix[row * dimensions + col];
+			cout << matrix[row * dimensions + col] << " ";
 		}
 	}
 }
