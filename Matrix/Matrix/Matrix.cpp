@@ -3,6 +3,7 @@
 
 using std::cout;
 using std::endl;
+using std::ostream;
 using std::invalid_argument;
 
 Matrix::Matrix()
@@ -29,7 +30,7 @@ Matrix::Matrix(int tempArray[], int size)
 
 	if ((sqrtNum * sqrtNum) == size) 
 	{
-		dimensions = sqrtNum;
+		dimensions = (int)sqrtNum;
 		matrix = new int[size];
 		for (int row = 0; row < dimensions; row++) {
 			for (int col = 0; col < dimensions; col++) {
@@ -39,7 +40,8 @@ Matrix::Matrix(int tempArray[], int size)
 	}
 	else
 	{
-		throw invalid_argument("The size must have an integer square root.");
+		//throw invalid_argument("The size must have an integer square root.");
+		cout << "The size must have an integer square root." << endl;
 	}
 }
 
@@ -63,7 +65,7 @@ void Matrix::clear() const
 }
 
 // for testing purposes
-void Matrix::print() const
+void Matrix::print() 
 {
 	for (int row = 0; row < dimensions; row++) {
 		for (int col = 0; col < dimensions; col++) {
@@ -71,6 +73,4 @@ void Matrix::print() const
 		}
 	}
 }
-
-
 
