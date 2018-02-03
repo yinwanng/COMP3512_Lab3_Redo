@@ -23,6 +23,7 @@ int main()
 	Matrix b;
 	b.set_value(0,0,2);
 	b.print();
+	cout << b.get_value(0,0);
 	
 
 

@@ -47,6 +47,11 @@ void Matrix::set_value(int row, int col, int value)
 	matrix[row * dimensions + col] = value;
 }
 
+int Matrix::get_value(int row, int col) const
+{
+	return matrix[row * dimensions + col];
+}
+
 // for testing purposes
 void Matrix::print() const
 {

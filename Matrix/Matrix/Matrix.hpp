@@ -6,7 +6,7 @@ public:
 	Matrix(int);
 	Matrix(int[], int);
 	void set_value(int, int, int);
-
+	int get_value(int, int) const;
 
 	void print() const; // for testing purposes
 private:
