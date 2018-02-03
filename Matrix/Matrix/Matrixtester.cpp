@@ -1,21 +1,31 @@
 #include <iostream>
 #include "Matrix.hpp"
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::invalid_argument;
 
 int main()
 {
-	Matrix a(3);
+	int values[] = { 1, 2, 3, 4 };
+	
+	
+	try {
+		Matrix a(values, 2);
+		a.print();
+	}
+	catch (const invalid_argument& e) {
+		cout << "ERROR: " << e.what() << endl;
+
+	}
 	
 
 
-	a.print();
 
 
 
 
-
-
+	cout << endl;
 	system("pause");
 	return 0;
 }

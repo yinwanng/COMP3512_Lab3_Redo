@@ -1,7 +1,8 @@
 #include "Matrix.hpp"
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::invalid_argument;
 
 Matrix::Matrix()
 {
@@ -21,6 +22,30 @@ Matrix::Matrix(int n)
 	}
 }
 
+Matrix::Matrix(int tempArray[], int size)
+{
+	double sqrtNum = sqrt(size);
+
+	if ((sqrtNum * sqrtNum) == size) 
+	{
+		dimensions = sqrtNum;
+		matrix = new int[size];
+		for (int row = 0; row < dimensions; row++) {
+			for (int col = 0; col < dimensions; col++) {
+				matrix[row * dimensions + col] = tempArray[row * dimensions + col];
+			}
+		}
+	}
+	else
+	{
+		throw invalid_argument("The size must have an integer square root.");
+	}
+}
+
+
+
+
+// for testing purposes
 void Matrix::print() const
 {
 	for (int row = 0; row < dimensions; row++) {
