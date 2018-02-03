@@ -1,11 +1,19 @@
 #include <iostream>
+#include "Matrix.hpp"
 
 using namespace std;
 
-
 int main()
 {
-	cout << "Hello Lab 3" << endl;
+	Matrix a(3);
+	
+
+
+	a.print();
+
+
+
+
 
 
 	system("pause");
