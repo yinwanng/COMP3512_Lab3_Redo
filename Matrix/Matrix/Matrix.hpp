@@ -22,8 +22,7 @@ public:
 	friend bool operator==(const Matrix&, const Matrix&);
 	friend bool operator!=(const Matrix&, const Matrix&);
 	friend bool operator<(const Matrix&, const Matrix&);
-	//friend bool operator<(const Matrix&, const Matrix&);
-	//friend bool operator>(const Matrix& lhs, const Matrix&);
+	friend bool operator>(const Matrix& lhs, const Matrix&);
 	//friend bool operator<=(const Matrix& lhs, const Matrix&);
 	//friend bool operator>=(const Matrix& lhs, const Matrix&);
 private:
