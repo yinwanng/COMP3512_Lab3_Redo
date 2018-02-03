@@ -42,8 +42,10 @@ Matrix::Matrix(int tempArray[], int size)
 	}
 }
 
-
-
+void Matrix::set_value(int row, int col, int value)
+{
+	matrix[row * dimensions + col] = value;
+}
 
 // for testing purposes
 void Matrix::print() const

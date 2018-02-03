@@ -16,8 +16,13 @@ int main()
 	}
 	catch (const invalid_argument& e) {
 		cout << "ERROR: " << e.what() << endl;
-
 	}
+
+
+
+	Matrix b;
+	b.set_value(0,0,2);
+	b.print();
 	
 
 
