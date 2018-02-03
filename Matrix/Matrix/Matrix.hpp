@@ -8,9 +8,9 @@ public:
 	Matrix();
 	~Matrix()
 	{
-		//delete[] matrix;
+		delete[] matrix;
 	}
-	
+	Matrix(const Matrix &);
 	Matrix(int);
 	Matrix(int[], int);
 	void set_value(int, int, int);

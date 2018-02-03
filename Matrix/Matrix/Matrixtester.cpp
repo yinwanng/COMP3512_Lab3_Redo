@@ -25,8 +25,13 @@ int main()
 	cout << b << endl;
 	a = b;
 	cout << "a" << endl;
+	a++;
 	cout << a << endl;
 
+
+	cout << "==========" << endl;
+	Matrix fk(a);
+	cout << fk << endl;
 	
 	system("pause");
 

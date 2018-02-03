@@ -13,6 +13,17 @@ Matrix::Matrix()
 	matrix[0] = 0;
 }
 
+Matrix::Matrix(const Matrix &other)
+{
+	dimensions = other.dimensions;
+	matrix = new int[dimensions * dimensions];
+	for (int row = 0; row < dimensions; row++) {
+		for (int col = 0; col < dimensions; col++) {
+			matrix[row * dimensions + col] = other.matrix[row * dimensions + col];
+		}
+	}
+}
+
 Matrix::Matrix(int n)
 {
 	dimensions = n;
