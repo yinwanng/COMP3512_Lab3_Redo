@@ -78,13 +78,22 @@ ostream & operator<<(ostream & out, const Matrix & m)
 	return out;
 }
 
-// for testing purposes
-void Matrix::print() 
+bool operator==(const Matrix &lhs, const Matrix &rhs)
 {
-	for (int row = 0; row < dimensions; row++) {
-		for (int col = 0; col < dimensions; col++) {
-			cout << matrix[row * dimensions + col] << " ";
+	if (lhs.dimensions != rhs.dimensions) {
+		return false;
+	}
+	else
+	{
+		for (int row = 0; row < lhs.dimensions; row++) {
+			for (int col = 0; col < lhs.dimensions; col++) {
+				if (lhs.matrix[row * lhs.dimensions + col] != rhs.matrix[row * rhs.dimensions + col]) {
+					return false;
+				}
+			}
 		}
+		return true;
 	}
 }
+
 

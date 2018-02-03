@@ -18,7 +18,14 @@ public:
 	void clear() const;
 	friend ostream & operator<<(ostream &, const Matrix &);
 
-	void print(); // for testing purposes
+	// comparison operators
+	friend bool operator==(const Matrix&, const Matrix&);
+	//friend bool operator!=(const Matrix&, const Matrix&);
+	//friend bool operator<(const Matrix&, const Matrix&);
+	//friend bool operator<(const Matrix&, const Matrix&);
+	//friend bool operator>(const Matrix& lhs, const Matrix&);
+	//friend bool operator<=(const Matrix& lhs, const Matrix&);
+	//friend bool operator>=(const Matrix& lhs, const Matrix&);
 private:
 	int *matrix;
 	int dimensions;
