@@ -74,6 +74,13 @@ Matrix & Matrix::operator++()
 	return *this;
 }
 
+Matrix Matrix::operator++(int)
+{
+	Matrix tmp(*this);
+	operator++();
+	return tmp;
+}
+
 ostream & operator<<(ostream & out, const Matrix & m)
 {
 	for (int row = 0; row < m.dimensions; row++) {
@@ -134,4 +141,15 @@ bool operator>=(const Matrix & lhs, const Matrix &rhs)
 	return !operator< (lhs, rhs);
 }
 
+void swap(Matrix &first, Matrix &second)
+{
+	using std::swap;
+	swap(first.dimensions, second.dimensions);
+	swap(first.matrix, second.matrix);
+}
 
+Matrix & Matrix::operator=(Matrix other)
+{
+	swap(*this, other);
+	return *this;
+}

@@ -8,7 +8,7 @@ public:
 	Matrix();
 	~Matrix()
 	{
-		delete[] matrix;
+		//delete[] matrix;
 	}
 	
 	Matrix(int);
@@ -26,8 +26,14 @@ public:
 	friend bool operator<=(const Matrix&, const Matrix&);
 	friend bool operator>=(const Matrix&, const Matrix&);
 
-	//precrement
+	//preincrement
 	Matrix& operator++();
+	//postincremnet
+	Matrix operator++(int);
+
+	// assignment operator using the copy-and-swap algorithm
+	friend void swap(Matrix&, Matrix&);
+	Matrix& operator=(Matrix);
 private:
 	int *matrix;
 	int dimensions;
