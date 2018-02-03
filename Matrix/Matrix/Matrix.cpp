@@ -181,6 +181,12 @@ void swap(Matrix &first, Matrix &second)
 	swap(first.matrix, second.matrix);
 }
 
+Matrix operator+(Matrix lhs, const Matrix &rhs)
+{
+	lhs += rhs;
+	return lhs;
+}
+
 Matrix & Matrix::operator=(Matrix other)
 {
 	swap(*this, other);
@@ -196,5 +202,6 @@ Matrix & Matrix::operator+=(const Matrix & rhs)
 	}
 	return *this;
 }
+
 
 
