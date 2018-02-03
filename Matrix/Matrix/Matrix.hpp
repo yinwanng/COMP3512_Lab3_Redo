@@ -25,6 +25,9 @@ public:
 	friend bool operator>(const Matrix&, const Matrix&);
 	friend bool operator<=(const Matrix&, const Matrix&);
 	friend bool operator>=(const Matrix&, const Matrix&);
+
+	//precrement
+	Matrix& operator++();
 private:
 	int *matrix;
 	int dimensions;

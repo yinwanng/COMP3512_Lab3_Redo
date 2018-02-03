@@ -14,14 +14,7 @@ int main()
 	Matrix a(values, 9);
 	Matrix b(values2, 9);
 
-	if (a >= b)
-	{
-		cout << "it is greater or equal";
-	}
-	else
-	{
-		cout << "it is not greater or equal";
-	}
+	cout << ++a;
 	
 
 

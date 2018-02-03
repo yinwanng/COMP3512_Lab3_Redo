@@ -64,6 +64,16 @@ void Matrix::clear() const
 	}
 }
 
+Matrix & Matrix::operator++()
+{
+	for (int row = 0; row < dimensions; row++) {
+		for (int col = 0; col < dimensions; col++) {
+			matrix[row * dimensions + col] = matrix[row * dimensions + col] + 1;
+		}
+	}
+	return *this;
+}
+
 ostream & operator<<(ostream & out, const Matrix & m)
 {
 	for (int row = 0; row < m.dimensions; row++) {
