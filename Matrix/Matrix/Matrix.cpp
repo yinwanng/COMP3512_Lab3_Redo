@@ -101,4 +101,12 @@ bool operator!=(const Matrix &lhs, const Matrix &rhs)
 	return !operator==(lhs, rhs);
 }
 
+bool operator<(const Matrix &lhs, const Matrix &rhs)
+{
+	if (lhs.dimensions < rhs.dimensions) {
+		return true;
+	}
+	return false;
+}
+
 
