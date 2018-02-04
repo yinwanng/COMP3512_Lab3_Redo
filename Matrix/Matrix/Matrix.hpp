@@ -38,14 +38,13 @@ public:
 	friend void swap(Matrix&, Matrix&);
 	Matrix& operator=(Matrix);
 
-	// binary arithmetic operators
-	// +=, +, -+, -
+	// binary arithmetic operators [+=, +, -+, -]
 	Matrix& operator+=(const Matrix&);
 	friend Matrix operator+(Matrix, const Matrix &);
 	Matrix& operator-=(const Matrix &);
 	friend Matrix operator-(Matrix, const Matrix &);
 
-	//identity
+	// identity
 	Matrix& identity();
 private:
 	int *matrix;
